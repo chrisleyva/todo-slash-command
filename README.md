@@ -1,5 +1,5 @@
 # todo-slash-command
-A .claude slash command to manage a simple todo list in your project's root directory, without having to leave Claude Code!
+A .claude slash command to manage a simple todo list in your project's root directory, without having to leave Claude Code! Todos are stored in `todos.md` at your project root and automatically numbered for easy reference.
 
 ## Inspiration
 You ever been in the midst of a vibe-session and thought, "Oh, I need to fix the padding on that button". Well, no need to even leave the claude interface. Just use this `/todo` slash-command to create and manage a simple todo list for your project, from **within** your project.
@@ -26,27 +26,30 @@ Download [todos.md](todos.md) or copy its contents and place it in 1 of 2 locati
 - Knows your next todo item (`/todo next`)
 - Add, complete, undo todo items
 
-## Available Commands
-All commands begin with `/todo`, followed by any of the following available commands:
- - `add "task description"` - Add a new todo
- - `add "task description" [tomorrow|next week|4 days|June 9|12-24-2025|etc...]` - Add a new todo with the provided due date
- - `due N [tomorrow|next week|4 days|June 9|12-24-2025|etc...]` - Mark todo N with the due date provided
- - `complete N` - Mark todo N as completed and move from the ##Active list to the ##Completed list
- - `remove N` - Remove todo N entirely
- - `undo N` - Mark completed todo N as incomplete
- - `list [N]` or no args - Show all (or N number of) todos in a user-friendly format, with each todo numbered for reference
- - `past due` - Show all of the tasks which are past due and still active
- - `next` - Shows the next active task in the list, this should respect Due dates, if there are any. If not, just show the first todo in the Active list
+## Available Commands & Usage Examples
 
+### Add todos:
+  - `/todo add "Fix navigation bug"`
+  - `/todo add "Fix navigation bug" tomorrow`
+  - `/todo add "Fix navigation bug" "June 25"`
 
-## Usage Examples:
-- `/todo add "Fix navigation bug"`
-- `/todo add "Fix navigation bug" [date/time/"tomorrow"/"next week"]`
-  - **Optional:** due date can be provided
-- `/todo complete 1` 
-- `/todo remove 2`
-- `/todo list`
-- `/todo undo 1`
+### Manage todos:
+  - `/todo complete 1` - Mark todo #1 as completed
+  - `/todo remove 2` - Delete todo #2 entirely
+  - `/todo undo 1` - Move completed todo back to active
+  - `/todo due 1 tomorrow` - Add due date to todo #1
+
+### View todos:
+  - `/todo list` - Show all todos (numbered)
+  - `/todo list 5` - Show first 5 todos
+  - `/todo next` - Show next task (respects due dates)
+  - `/todo past due` - Show overdue tasks
+
+### Date Formats:
+All of the following formats are acceptable for specifying due dates:
+  - "tomorrow", "next week", "4 days"
+  - "June 25", "12-24-2025"
+  - Times: "tomorrow 3pm", "June 25 2:30 PM"
 
 ## Questions?
 Any questions? Feel free to reach out and send me a message!
