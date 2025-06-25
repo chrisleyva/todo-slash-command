@@ -7,7 +7,7 @@ You ever been in the midst of a vibe-session and thought, "Oh, I need to fix the
 Once the `todos.md` file is created in your project's root directory, you can probably even just tell claude to add to it without having to use the slash-command, but the slash-command provides some nifty commands for your benefit.
 
 ## Install
-Download [todos.md](todos.md) or copy its contents and place it in 1 of 2 locations...
+Download [todo.md](todo.md) or copy its contents and place it in 1 of 2 locations...
 
 ### 1. Personal command (✨ recommended)
 ...your home directory: `~/.claude/commands/todos.md`.
